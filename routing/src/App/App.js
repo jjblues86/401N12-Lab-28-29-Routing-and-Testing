@@ -2,13 +2,14 @@ import React from 'react';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import Landing from '../Landing/Landing';
 import Dashboard from '../Dashboard/Dashboard';
+import './App.scss';
 
 
 export default class App extends  React.Component {
   render() {
       const LANDING_ROUTE = '/';
     return(
-        <main>
+        <main className="app">
          <BrowserRouter>
              <nav>
                  <ul>

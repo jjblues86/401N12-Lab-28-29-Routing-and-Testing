@@ -3,12 +3,11 @@
 =================================================
 ### Author: Jerome Joof
 
-[repo](https://github.com/jjblues86/401N12-Lab-28-Routing-and-Testing)
-
 ## Overview
 * Create an application that adds notes to your browser
 
 ### Links and Resources
+[repo](https://github.com/jjblues86/401N12-Lab-28-Routing-and-Testing)
 
 ## Components
 * App.js

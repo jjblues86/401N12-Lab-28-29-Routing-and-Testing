@@ -34,12 +34,15 @@ export default class NoteForm extends React.Component {
                      onChange={this.handleChange}
                      placeholder="title"
                 />
-                <input
+                <br />
+                <textarea
+                    rows="4" cols="50"
                     type="text"
                     name="content"
                     value={this.state.content}
                     onChange={this.handleChange}
                     placeholder="content"/>
+                    <br />
                 <button type="submit">Create Notes!</button>
             </form>
         )
