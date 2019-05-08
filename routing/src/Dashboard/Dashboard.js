@@ -1,5 +1,6 @@
 import React from 'react';
 import NoteForm from '../NoteCreateForm/NoteForm';
+import NoteItem from '../NoteItem/NoteItem';
 
 export default class Dashboard extends  React.Component {
     constructor(props) {
@@ -15,14 +16,23 @@ export default class Dashboard extends  React.Component {
             <ul>
                 {
                     this.state.notes.map(currentNotes => {
-                        return <li key={currentNotes.id}>
-                            {currentNotes.title} : {currentNotes.content}
-                        </li>
+                        return <NoteItem note={currentNotes}
+                                         handleRemoveNote={this.handleRemoveNote}
+                        // return <li key={currentNotes.id}>
+                        //     {currentNotes.title} : {currentNotes.content}
+                        // </li>
+                        />
                     })
                 }
             </ul>
         )
 
+    };
+
+    handleRemoveNote = note => {
+        this.setState(previousState => ({
+            notes: previousState.notes.filter(currentNotes => currentNotes.id !==note.id),
+        }));
     };
 
     handleAddNote = note => {
