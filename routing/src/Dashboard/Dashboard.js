@@ -18,6 +18,7 @@ export default class Dashboard extends  React.Component {
                     this.state.notes.map(currentNotes => {
                         return <NoteItem note={currentNotes}
                                          handleRemoveNote={this.handleRemoveNote}
+                                         handleUpdateNote={this.handleUpdateNote}
                         // return <li key={currentNotes.id}>
                         //     {currentNotes.title} : {currentNotes.content}
                         // </li>
@@ -35,6 +36,17 @@ export default class Dashboard extends  React.Component {
         }));
     };
 
+    handleUpdateNote = (note) => {
+        this.setState((previousState) => {
+            const updateNotes = previousState.notes.map(currentNotes =>
+                note.id === currentNotes.id ? note: currentNotes);
+
+            return {notes: updateNotes };
+
+        });
+
+    };
+
     handleAddNote = note => {
         //Jerome - this is where I create the id, content and title
         // note.id = Math.random();
@@ -50,7 +62,6 @@ export default class Dashboard extends  React.Component {
             }
         });
     };
-
 
     render() {
         return(
