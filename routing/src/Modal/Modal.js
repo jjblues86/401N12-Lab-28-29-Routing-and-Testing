@@ -6,8 +6,10 @@ export default class Modal extends React.Component {
         const showOrHide = this.props.show ? 'modal display-block' : 'modal display-none';
         return(
             <div className={showOrHide}>
+                <div className="modal-main">
             {this.props.children}
-            <button>Close</button>
+            <button onClick={this.props.hideModal}>Close</button>
+                </div>
         </div>);
 
     }

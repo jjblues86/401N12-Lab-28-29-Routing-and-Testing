@@ -10,8 +10,8 @@ export default class NoteItem extends React.Component {
         const showModal = () => handleUpdateNote({...currentNotes, editing: true});
         const hideModal = () => handleUpdateNote({...currentNotes, editing: false});
 
-        const handleEditView = () => {
-
+        const handleUpdate = (updatedNote) => {
+            handleUpdateNote({...updatedNote, editing: false});
         };
 
         return(
@@ -20,8 +20,8 @@ export default class NoteItem extends React.Component {
 
                 <button onClick={this.props.handleRemoveNote.bind(null, currentNotes)}>Remove</button>
                 <button onClick={showModal}>Edit</button>
-                <Modal show={currentNotes.editing}>
-                <NoteForm />
+                <Modal show={currentNotes.editing} hideModal={hideModal}>
+                <NoteForm note={currentNotes} handleComplete={handleUpdate}/>
                 </Modal>
             </li>
         )

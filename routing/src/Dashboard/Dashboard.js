@@ -9,7 +9,7 @@ export default class Dashboard extends  React.Component {
         this.state = {};
         // Jerome - this array in here will hold all the NoteCreateForm for my application
         this.state.notes = [];
-        this.state.list = [];
+        // this.state.list = [];
     }
 
     addNotes = () => {
@@ -68,7 +68,7 @@ export default class Dashboard extends  React.Component {
         return(
             <main>
                 <h2>Create Notes</h2>
-                <NoteForm handleAddNote={this.handleAddNote}/>
+                <NoteForm handleComplete={this.handleAddNote}/>
                 {this.addNotes()}
             </main>
         )
