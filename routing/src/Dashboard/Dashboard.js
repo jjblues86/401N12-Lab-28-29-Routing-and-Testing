@@ -9,6 +9,7 @@ export default class Dashboard extends  React.Component {
         this.state = {};
         // Jerome - this array in here will hold all the NoteCreateForm for my application
         this.state.notes = [];
+        this.state.list = [];
     }
 
     addNotes = () => {
