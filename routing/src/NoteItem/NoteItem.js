@@ -15,7 +15,7 @@ export default class NoteItem extends React.Component {
         };
 
         return(
-            <li key={currentNotes.id}>
+            <li className="list" key={currentNotes.id}>
                 {currentNotes.title} : {currentNotes.content}
 
                 <button onClick={this.props.handleRemoveNote.bind(null, currentNotes)}>Remove</button>

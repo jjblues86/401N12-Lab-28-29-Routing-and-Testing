@@ -9,7 +9,6 @@ export default class Dashboard extends  React.Component {
         this.state = {};
         // Jerome - this array in here will hold all the NoteCreateForm for my application
         this.state.notes = [];
-        // this.state.list = [];
     }
 
     addNotes = () => {
@@ -20,9 +19,6 @@ export default class Dashboard extends  React.Component {
                         return <NoteItem note={currentNotes}
                                          handleRemoveNote={this.handleRemoveNote}
                                          handleUpdateNote={this.handleUpdateNote}
-                        // return <li key={currentNotes.id}>
-                        //     {currentNotes.title} : {currentNotes.content}
-                        // </li>
                         />
                     })
                 }
@@ -66,8 +62,8 @@ export default class Dashboard extends  React.Component {
 
     render() {
         return(
-            <main>
-                <h2>Create Notes</h2>
+            <main className="dash">
+                <h2 className="heading">Create Notes</h2>
                 <NoteForm handleComplete={this.handleAddNote}/>
                 {this.addNotes()}
             </main>
