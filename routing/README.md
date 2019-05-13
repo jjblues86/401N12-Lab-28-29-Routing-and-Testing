@@ -1,10 +1,11 @@
-# 401N12-Lab-28-Routing-and-Testing
+# 401N12-Lab-28-29-Routing-and-Testing
 ![CF](http://i.imgur.com/7v5ASc8.png) LAB
 =================================================
 ### Author: Jerome Joof
 
 ## Overview
 * Create an application that adds notes to your browser
+* The application has the ability to edit your notes and updates the input in the provided form
 
 ### Links and Resources
 [repo](https://github.com/jjblues86/401N12-Lab-28-Routing-and-Testing)
@@ -16,10 +17,13 @@
     * This where the whole state of the application resides
 * NoteForm.js
     * This is where the form is created
+ * NoteItem.js
+    * This is where the title and content of the application is rendered.
+    * The Edit and Remove buttons exist in this file
 
 ## render
 * creates notes with the help of a form
-* returns unordered lists of created notes with title cna content
+* returns unordered lists of created notes with title and content
 
 
 ## Available Scripts
